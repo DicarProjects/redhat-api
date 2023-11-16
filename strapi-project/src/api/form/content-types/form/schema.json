@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "subject": {
+      "type": "enumeration",
+      "enum": [
+        "QA",
+        "WEB",
+        "MOBILE"
+      ]
+    },
+    "comment": {
+      "type": "text",
+      "maxLength": 512,
+      "minLength": 1
+    }
+  }
+}
