@@ -1,11 +1,10 @@
 import { Context } from 'koa';
 import { factories } from '@strapi/strapi';
 import { FormData } from '../interfaces/FormData';
-import { isValidEmail } from '../validators/emailValidator'; // Import the email validation function.
+import { isValidEmail } from '../validators/emailValidator';
 
 export default factories.createCoreController('api::form.form', ({ strapi }) =>  ({
   /**
-   * Endpoint to handle form submission.
    * @param {Context} ctx - Koa context object.
    */
   async runFormRecordProcess(ctx: Context) {

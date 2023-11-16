@@ -3,9 +3,8 @@ import { FormData } from '../interfaces/FormData';
 
 module.exports = (): Service => ({
   /**
-   * Creates a new record using the Strapi entity service.
-   * @param {FormData} data - Data to create the record.
-   * @returns {Promise<any>} - Promise that resolves with the result of the creation.
+   * @param {FormData} data
+   * @returns {Promise<any>}
    */
   async createForm(data: FormData) {
     try {

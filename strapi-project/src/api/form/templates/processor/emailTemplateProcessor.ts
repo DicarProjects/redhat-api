@@ -4,13 +4,12 @@ import { FormData } from '../../interfaces/FormData';
 
 /**
  * Process email template and replace placeholders with form data.
- * @param {FormData} formData - Form data object.
- * @returns {string} - Processed HTML content.
+ * @param {FormData} formData
+ * @returns {string}
  */
 export function processEmailTemplate(formData: FormData): string {
   try {
     const templatePath = path.join(__dirname, '..', 'html', 'emailTemplate.html');
-    console.log("esta es la ruta:",templatePath);
     const htmlContent = fs.readFileSync(templatePath, 'utf8');
 
     const replacedHtml = htmlContent.replace(/\[(.+?)\]/g, (match, p1) => {
