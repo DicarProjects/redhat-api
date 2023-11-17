@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build && npm run copy-templates",
     "strapi": "strapi",
-    "copy-templates": "xcopy /E /I src\\api\\form\\templates\\html dist\\src\\api\\form\\templates\\html"
+    "copy-templates": "cp -R src/api/form/templates/html dist/src/api/form/templates/html"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "4.15.4",
