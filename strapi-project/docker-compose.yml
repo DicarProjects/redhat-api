@@ -37,9 +37,12 @@ services:
       POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
-      - /c/Users/Personal/docker-data/postgresql:/var/lib/postgresql/data
+      - pg_data:/var/lib/postgresql/data
     networks:
       - backend
 
 networks:
   backend:
+
+volumes:
+  pg_data:
